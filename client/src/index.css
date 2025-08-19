@@ -1,0 +1,26 @@
+/* RESET CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100%;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+/* VARIABLES */
+
+:root {
+  --text-color: #222222;
+  --bg-color: #eee;
+  --primary-color: #044c60;
+}
