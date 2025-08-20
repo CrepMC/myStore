@@ -1,0 +1,101 @@
+:root {
+  --sidebar-w: 320px;
+  --dur: 0.3s;
+}
+
+.page {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Nút mở */
+.open-btn {
+  position: absolute;
+  left: -60px;
+  background: none;
+  background-color: #A9B77D;
+  font-size: 25px;
+  width: 80px;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+  color: #000000;
+  height: 40px;
+  border-radius: 0px 20px 20px 0px;
+  transition: 0.5s;
+  outline: none;
+}
+
+.open-btn:hover {
+  position: absolute;
+  left: 0;
+}
+
+/* .open-btn button {
+  
+} */
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.32);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--dur);
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  inset: 0 auto 0 0; /* trái */
+  width: var(--sidebar-w);
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transform: translateX(-100%);
+  transition: transform var(--dur);
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.sidebar .header h2 {
+    margin:0;
+    font-size:18px;
+}
+
+.sidebar .close-btn {
+  border: 0;
+  background: transparent;
+  font-size: 20px;
+  cursor: pointer;
+}
+.sidebar nav a {
+  display: block;
+  padding: 12px 16px;
+  color: #111;
+  text-decoration: none;
+}
+.sidebar nav a:hover {
+  background: #f7f7f7;
+}
+
+/* Trạng thái mở */
+.is-open .overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+.is-open .sidebar {
+  transform: translateX(0);
+}
+.no-scroll {
+  overflow: hidden;
+} /* chặn body scroll khi mở */
